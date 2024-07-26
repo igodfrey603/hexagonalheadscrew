@@ -43,7 +43,7 @@ fusion360utils = importlib.util.module_from_spec(spec)
 # Load the module
 spec.loader.exec_module(fusion360utils)
 module = importlib.util.module_from_spec(spec)
-sys.modules[futil] = module
+sys.modules['futil'] = module
 
 # Now you can use the module with the alias
 import futil
