@@ -19,34 +19,7 @@ app = adsk.core.Application.get()
 _ui = app.userInterface
 
 
-# Define the file path to your script
-file_path = '/path/to/config.py'
-file1 =  os.path.expanduser('~AppData/Roaming/Autodesk/ApplicationPlugins/DINFASTENERS.bundle/Contents/config.py')
-file2 =  os.path.expanduser('~AppData/Roaming/Autodesk/ApplicationPlugins/DINFASTENERS.bundle/Contents/lib/fusion360utils"')
 
-
-# Create a module spec from the file path
-spec = importlib.util.spec_from_file_location("config", file1)
-
-# Create a new module based on the spec
-config = importlib.util.module_from_spec(spec)
-
-# Load the module
-spec.loader.exec_module(config)
-
-# Create a module spec from the file path
-spec = importlib.util.spec_from_file_location("fusion360utils", file2)
-
-# Create a new module based on the spec
-fusion360utils = importlib.util.module_from_spec(spec)
-
-# Load the module
-spec.loader.exec_module(fusion360utils)
-module = importlib.util.module_from_spec(spec)
-sys.modules[futil] = module
-
-# Now you can use the module with the alias
-import futil
 
 # Now you can use the module
 
