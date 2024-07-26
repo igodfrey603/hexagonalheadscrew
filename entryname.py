@@ -4,8 +4,7 @@ import adsk.core, adsk.fusion, adsk.cam, traceback
 import os
 import math
 from math import cos, sin, radians, pi
-from ...lib import fusion360utils as futil
-from ... import config
+
 
 _handlers = []
 
